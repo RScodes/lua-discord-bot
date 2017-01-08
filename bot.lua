@@ -8,7 +8,13 @@ end)
 client:on('messageCreate', function(message)
     if message.content == '?/ping' then
         message.channel:sendMessage('pong')
-    end
+    else
+    if message.content == '?/musa' then
+        message.channel:sendMessage('motherland')
+    else
+    if message.content == '?/discordia' then
+        message.channel:sendMessage('https://github.com/SinisterRectus/Discordia')
+    else
 end)
 
 client:run('token')
