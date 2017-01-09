@@ -48,6 +48,6 @@ client:on('messageCreate', function(message)
 		message.channel:sendMessage("done!")
 end)
 
-client:run('token')
+client:run('MjI2MDA3OTY5MjQ1MDM2NTU1.C1Vw-w.DEU4QprcE9a4M7MlCL5oUYeqSGs')
  
 
