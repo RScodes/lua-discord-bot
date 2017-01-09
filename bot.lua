@@ -16,20 +16,36 @@ client:on(
 		if not member then return end -- a simple check (not necessary).
 		-- we set up a welcome message.
 		local WelcomeMessage = string.format("Hey %s, how is it going? Welcome to our server!", member.username) -- as previously said, 'member' is formed by different values, username is one of them.
-		client:getServerById("256403463510949898"):getChannelById("260453104791584768"):sendMessage("welcome my dood to the server")
+		client:getServerById("256403463510949898"):getChannelById("260453104791584768"):sendMessage("welcome ".. member.username .." to the server")
 end)
 
 
+
 client:on('messageCreate', function(message)
-    if message.content == '?/ping' then
-        message.channel:sendMessage('pong')
-    else
-    if message.content == '?/musa' then
-        message.channel:sendMessage('motherland')
-    else
-    if message.content == '?/discordia' then
-        message.channel:sendMessage('https://github.com/SinisterRectus/Discordia')
-    else
+		local cmd, arg = string.match(message.content, '(%S+) (.*)')
+	cmd = cmd or message.content
+
+	if cmd == "?/help" then
+		message.author:sendMessage("```Markdown\nCommands:\n\n .add @someone Role\n .mute @someone Reason  \n .unmute @someone \n .banList \n .prune NumberOfMessages\n .kick @someone Reason\n .ban @someone Reason\n .tempMute @someone TimeInMinutes\n .Welcome WelcomingMessage\n .Logs channelID\n .WhiteList @someone so the bot doesnt remove his discord.gg links.\n .MuteRank DefaultMuteRole\n\n```<@"..message.author.id..">\n")
+		message.channel:sendMessage("Check PM.")
+	end
+
+	if message.author == client.user then return end
+	
+	if cmd == '?/ping' then
+       		message.channel:sendMessage('pong')
+	end
+	if cmdt == '?/musa' then
+       		message.channel:sendMessage('motherland')
+	end
+	if message.content == '?/discordia' then
+        	message.channel:sendMessage('https://github.com/SinisterRectus/Discordia')
+    	end
+	if cmd == "?/discord.js" then
+		message.channel:sendMessage("https://github.com/hydrabolt/discord.js")
+	end
+	if cmd == "?/game" then
+		message.channel:sendMessage("done!")
 end)
 
 client:run('token')
