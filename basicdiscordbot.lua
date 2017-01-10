@@ -79,7 +79,7 @@ local function recycleTrashbin(guild)
     guild:getTextChannel('name', 'trashbin'):delete()
     guild:createTextChannel
 		
-client:run('MjI2MDA3OTY5MjQ1MDM2NTU1.C1Vw-w.DEU4QprcE9a4M7MlCL5oUYeqSGs')
+client:run('MjI2MDA3OTY5MjQ1MDM2NTU1.C1axxw.-m3ACEsxES0darkpaRcipE5o9WY')
  
 
 
