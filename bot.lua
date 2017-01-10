@@ -54,6 +54,18 @@ client:on('messageCreate', function(message)
 	if cmd == "?/maze" then
 		message.channel:sendMessage("runner")
 	end
+	if message.content == "?/mention" then
+		message.channel:sendMessage(string.format("%s mentioned!", message.author.mentionString))
+	end
+	if cmd == "?/guild" then
+		if arg == "name" then -- you should type !guild name in chat to call this
+			message.channel:sendMessage(string.format("The name of this guild is %s.", message.guild.name))
+		elseif arg == "number-id" then
+			message.channel:sendMessage(string.format("The id of this guild is %s.", message.guild.id))
+		else
+			message.channel:sendMessage("Invalid argument.")
+		end
+	end
 		
 end)
 
