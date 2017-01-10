@@ -66,9 +66,10 @@ client:on('messageCreate', function(message)
 			message.channel:sendMessage("Invalid argument.")
 		end
 	end
-	if message.content == "?/whobanned" then
-		message.channel:sendMessage(string.format(bannedUsers))
+	if message.content == "?/membercount" then
+		message.channel:sendMessage(string.format(memberCount))
 	end
+
 		
 end)
 
