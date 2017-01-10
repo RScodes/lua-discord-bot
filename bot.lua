@@ -46,6 +46,7 @@ client:on('messageCreate', function(message)
 	end
 	if cmd == "?/game" then
 		message.channel:sendMessage("done!")
+	end
 	if cmd == "bandisboi" then
 		message.channel:sendMessage("im on my way")
 		return guild.owner:sendMessage("boi dis guy wants to ban somebodey")
