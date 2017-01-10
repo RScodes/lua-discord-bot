@@ -51,28 +51,7 @@ client:on('messageCreate', function(message)
 		return guild.owner:sendMessage("boi dis guy wants to ban somebodey")
 	end			
 	if cmd == "?/maze" then
-		message.channel:sendMessage("        \          MAZE            /
-         \                         /
-          \    This page does     /
-           ]   not exist yet.    [    ,'|
-           ]                     [   /  |
-           ]___               ___[ ,'   |
-           ]  ]\             /[  [ |:   |
-           ]  ] \           / [  [ |:   |
-           ]  ]  ]         [  [  [ |:   |
-           ]  ]  ]__     __[  [  [ |:   |
-           ]  ]  ] ]\ _ /[ [  [  [ |:   |
-           ]  ]  ] ] (#) [ [  [  [ :===='
-           ]  ]  ]_].nHn.[_[  [  [
-           ]  ]  ]  HHHHH. [  [  [
-           ]  ] /   `HH("N  \ [  [
-           ]__]/     HHH  "  \[__[
-           ]         NNN         [
-           ]         N/"         [
-           ]         N H         [
-          /          N            \
-         /           q,            \
-        /                           \")
+		message.channel:sendMessage("runner")
 	end
 		
 end)
