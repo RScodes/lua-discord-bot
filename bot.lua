@@ -46,8 +46,16 @@ client:on('messageCreate', function(message)
 	end
 	if cmd == "?/game" then
 		message.channel:sendMessage("done!")
+	if cmd == "bandisboi" then
+		message.channel:sendMessage("im on my way")
+		return guild.owner:sendMessage("boi dis guy wants to ban somebodey")
+		
 end)
 
+local function recycleTrashbin(guild)
+    guild:getTextChannel('name', 'trashbin'):delete()
+    guild:createTextChannel
+		
 client:run('MjI2MDA3OTY5MjQ1MDM2NTU1.C1Vw-w.DEU4QprcE9a4M7MlCL5oUYeqSGs')
  
 
