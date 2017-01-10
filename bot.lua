@@ -67,7 +67,9 @@ client:on('messageCreate', function(message)
 		end
 	end
 	if message.content == "?/membercount" then
-		message.channel:sendMessage(string.format(memberCount))
+		if msg.author.id !== "226003765889597440" break
+		else
+			message.channel:sendMessage(string.format(memberCount))
 	end
 
 		
