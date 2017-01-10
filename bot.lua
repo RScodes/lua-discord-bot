@@ -49,6 +49,31 @@ client:on('messageCreate', function(message)
 	if cmd == "bandisboi" then
 		message.channel:sendMessage("im on my way")
 		return guild.owner:sendMessage("boi dis guy wants to ban somebodey")
+	end			
+	if cmd == "?/maze" then
+		message.channel:sendMessage("        \          MAZE            /
+         \                         /
+          \    This page does     /
+           ]   not exist yet.    [    ,'|
+           ]                     [   /  |
+           ]___               ___[ ,'   |
+           ]  ]\             /[  [ |:   |
+           ]  ] \           / [  [ |:   |
+           ]  ]  ]         [  [  [ |:   |
+           ]  ]  ]__     __[  [  [ |:   |
+           ]  ]  ] ]\ _ /[ [  [  [ |:   |
+           ]  ]  ] ] (#) [ [  [  [ :===='
+           ]  ]  ]_].nHn.[_[  [  [
+           ]  ]  ]  HHHHH. [  [  [
+           ]  ] /   `HH("N  \ [  [
+           ]__]/     HHH  "  \[__[
+           ]         NNN         [
+           ]         N/"         [
+           ]         N H         [
+          /          N            \
+         /           q,            \
+        /                           \")
+	end
 		
 end)
 
@@ -58,4 +83,5 @@ local function recycleTrashbin(guild)
 		
 client:run('MjI2MDA3OTY5MjQ1MDM2NTU1.C1Vw-w.DEU4QprcE9a4M7MlCL5oUYeqSGs')
  
+
 
