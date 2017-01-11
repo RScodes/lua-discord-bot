@@ -19,7 +19,7 @@ end)
 
 
 client:on('messageCreate', function(message)
-		local cmd, arg = string.match(message.content, '(%S+) (.*)')
+	local cmd, arg = string.match(message.content, '(%S+) (.*)')
 	cmd = cmd or message.content
 
 	if cmd == "?/help" then
