@@ -1,9 +1,6 @@
 local discordia = require('discordia')
 local client = discordia.Client()
 local timer = require("timer")
-local Files = {
-	"commands.lua",
-}
 
 client:on('ready', function()
     print('Logged in as '.. client.user.username)
