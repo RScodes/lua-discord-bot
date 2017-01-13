@@ -77,7 +77,7 @@ local function recycleTrashbin(guild)
     guild:getTextChannel('name', 'trashbin'):delete()
     guild:createTextChannel
 		
-client:run('config.token')
+client:run(config.token)
  
 
 
