@@ -24,7 +24,7 @@ client:on('messageCreate', function(message)
 	cmd = cmd or message.content
 
 	if cmd == "?/help" then
-		message.author:sendMessage("```Markdown\nCommands:\n\n .add @someone Role\n .mute @someone Reason  \n .unmute @someone \n .banList \n .prune NumberOfMessages\n .kick @someone Reason\n .ban @someone Reason\n .tempMute @someone TimeInMinutes\n .Welcome WelcomingMessage\n .Logs channelID\n .WhiteList @someone so the bot doesnt remove his discord.gg links.\n .MuteRank DefaultMuteRole\n\n```<@"..message.author.id..">\n")
+		message.author:sendMessage("```boi```<@"..message.author.id..">\n")
 		message.channel:sendMessage("Check PM.")
 	end
 
@@ -72,10 +72,6 @@ client:on('messageCreate', function(message)
 
 		
 end)
-
-local function recycleTrashbin(guild)
-    guild:getTextChannel('name', 'trashbin'):delete()
-    guild:createTextChannel
 		
 client:run(config.token)
  
