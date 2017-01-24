@@ -1,7 +1,6 @@
 local discordia = require('discordia')
 local client = discordia.Client()
 local timer = require("timer")
-local config = require("./config.json")
 
 client:on('ready', function()
     print('Logged in as '.. client.user.username)
@@ -73,7 +72,7 @@ client:on('messageCreate', function(message)
 		
 end)
 		
-client:run(config.token)
+client:run("put your token here")
  
 
 
