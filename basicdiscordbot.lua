@@ -59,6 +59,8 @@ client:on('messageCreate', function(message)
 			message.channel:sendMessage(string.format("The name of this guild is %s.", message.guild.name))
 		elseif arg == "number-id" then
 			message.channel:sendMessage(string.format("The id of this guild is %s.", message.guild.id))
+		elseif arg == "owner" then
+			message.channel:sendMessage(string.format("the owner is %s.", message.guild.owner.username))
 		else
 			message.channel:sendMessage("Invalid argument.")
 		end
