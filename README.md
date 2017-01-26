@@ -1,6 +1,6 @@
 # lua-discord-bot
 
-a basic discord bot in lua programming.
+a basic discord bot in lua programming using the discord library [discordia](https://github.com/SinisterRectus/Discordia).
 
 to use it just make a token in the config and then you can run the bot.
 
