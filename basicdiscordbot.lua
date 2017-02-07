@@ -1,6 +1,6 @@
 local discordia = require('discordia')
 local client = discordia.Client()
-local timer = require("timer")
+
 
 client:on('ready', function()
     print('Logged in as '.. client.user.username)
@@ -29,32 +29,35 @@ client:on('messageCreate', function(message)
 
 	if message.author == client.user then return end
 	
-	if message.content == '?/ping' then
+	if cmd == '?/ping' then
        		message.channel:sendMessage('pong')
 	end
-	if message.content == '?/musa' then
+	if cmd == '?/musa' then
        		message.channel:sendMessage('motherland')
 	end
-	if message.content == '?/discordia' then
+	if cmd == '?/discordia' then
         	message.channel:sendMessage('https://github.com/SinisterRectus/Discordia')
     	end
-	if message.content == "?/discord.js" then
+	if cmd == '?/setservername' then
+		guild:setName(arg)
+		message.channel:sendMessage('done')
+	if cmd == "?/discord.js" then
 		message.channel:sendMessage("https://github.com/hydrabolt/discord.js")
 	end
-	if cmessage.content == "?/game" then
+	if cmd == "?/game" then
 		message.channel:sendMessage("done!")
 	end
-	if message.content == "bandisboi" then
+	if cmd == "bandisboi" then
 		message.channel:sendMessage("im on my way")
 		return guild.owner:sendMessage("boi dis guy wants to ban somebodey")
 	end			
-	if message.content == "?/maze" then
+	if cmd == "?/maze" then
 		message.channel:sendMessage("runner")
 	end
-	if message.content == "?/mention" then
+	if cmd == "?/mention" then
 		message.channel:sendMessage(string.format("%s mentioned!", message.author.mentionString))
 	end
-	if message.content == "?/guild" then
+	if cmd == "?/guild" then
 		if arg == "name" then -- you should type !guild name in chat to call this
 			message.channel:sendMessage(string.format("The name of this guild is %s.", message.guild.name))
 		elseif arg == "number-id" then
@@ -65,7 +68,7 @@ client:on('messageCreate', function(message)
 			message.channel:sendMessage("Invalid argument.")
 		end
 	end
-	if message.content == "?/membercount" then
+	if cmd == "?/membercount" then
 		if msg.author.id !== "226003765889597440" then break end
 		else
 		message.channel:sendMessage(string.format(memberCount))
